@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/genericForm.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +141,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606667009280</updated>
       <workItem from="1606667010423" duration="6904000" />
-      <workItem from="1606731844316" duration="4352000" />
+      <workItem from="1606731844316" duration="8794000" />
     </task>
     <task id="LOCAL-00001" summary="project setup">
       <created>1606667435728</created>
@@ -168,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606676339450</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adaugat form facilitate">
+      <created>1606739616989</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606739616989</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,13 +193,14 @@
     <MESSAGE value="project setup" />
     <MESSAGE value="adaugat useri si securitate" />
     <MESSAGE value="adaugat entitati" />
-    <option name="LAST_COMMIT_MESSAGE" value="adaugat entitati" />
+    <MESSAGE value="adaugat form facilitate" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaugat form facilitate" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606675809982">
+    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606741167711">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1606675809982" />
+    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1606741167711" />
     <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1606676342135">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -205,9 +209,9 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2853" y="-489" width="587" height="801" key="find.popup/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1606672002253" />
-    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup" timestamp="1606672008278">
+    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup" timestamp="1606739934634">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1606672008278" />
+    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1606739934634" />
   </component>
 </project>
