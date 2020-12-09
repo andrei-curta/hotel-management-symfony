@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Facility index{% endblock %}
+{% block title %}Service index{% endblock %}
 
 {% block body %}
-    <h1>Facility index</h1>
+    <h1>Service index</h1>
 
     <table class="table">
         <thead>
@@ -15,14 +15,14 @@
             </tr>
         </thead>
         <tbody>
-        {% for facility in facilities %}
+        {% for service in services %}
             <tr>
-                <td>{{ facility.id }}</td>
-                <td>{{ facility.name }}</td>
-                <td>{{ facility.description }}</td>
+                <td>{{ service.id }}</td>
+                <td>{{ service.name }}</td>
+                <td>{{ service.description }}</td>
                 <td>
-                    <a href="{{ path('facility_show', {'id': facility.id}) }}">show</a>
-                    <a href="{{ path('facility_edit', {'id': facility.id}) }}">edit</a>
+                    <a href="{{ path('service_show', {'id': service.id}) }}">show</a>
+                    <a href="{{ path('service_edit', {'id': service.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +33,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('facility_new') }}">Create new</a>
+    <a href="{{ path('service_new') }}">Create new</a>
 {% endblock %}

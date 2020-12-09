@@ -20,8 +20,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/genericForm.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/validator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/validator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AppartmentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ReservationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ServiceController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ServicePricingController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/AppartmentType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ReservationType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ServicePricingType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ServiceType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/appartment/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/appartment/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/appartment/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/appartment/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/appartment/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/appartment/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/facility/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/facility/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/facility/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/facility/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/facility/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reservation/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reservation/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reservation/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reservation/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reservation/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reservation/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service_pricing/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service_pricing/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service_pricing/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service_pricing/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service_pricing/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/service_pricing/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FacilityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FacilityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Facility.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Facility.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/FacilityType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/FacilityType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/facility/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/facility/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,18 +158,22 @@
       <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
       <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kyJgcCUkNSVE5hWGyBBZGavhfi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -131,6 +182,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hotel-management\src\Controller" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -141,7 +197,8 @@
       <option name="presentableId" value="Default" />
       <updated>1606667009280</updated>
       <workItem from="1606667010423" duration="6904000" />
-      <workItem from="1606731844316" duration="8794000" />
+      <workItem from="1606731844316" duration="10259000" />
+      <workItem from="1607412696164" duration="17464000" />
     </task>
     <task id="LOCAL-00001" summary="project setup">
       <created>1606667435728</created>
@@ -171,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606739616989</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adaugat salvare in bd la facilitate">
+      <created>1606819191066</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606819191066</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,21 +254,31 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="project setup" />
     <MESSAGE value="adaugat useri si securitate" />
     <MESSAGE value="adaugat entitati" />
     <MESSAGE value="adaugat form facilitate" />
-    <option name="LAST_COMMIT_MESSAGE" value="adaugat form facilitate" />
+    <MESSAGE value="adaugat salvare in bd la facilitate" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaugat salvare in bd la facilitate" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606741167711">
+    <state x="-2902" y="-491" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607418263642">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1606741167711" />
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1606676342135">
+    <state x="-2902" y="-491" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1607418263642" />
+    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607433210068">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1606676342135" />
+    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1607433210068" />
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1606819312229">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1606819312229" />
+    <state x="-2742" y="-174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607439017889">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state x="-2742" y="-174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1607439017889" />
     <state x="-2853" y="-489" width="587" height="801" key="find.popup" timestamp="1606672002253">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>

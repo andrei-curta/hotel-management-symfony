@@ -34,11 +34,6 @@ class Facility
      */
     private $appartments;
 
-    public function __construct()
-    {
-        $this->appartments = new ArrayCollection();
-    }
-
     public function getId(): ?int
     {
         return $this->id;
@@ -94,4 +89,8 @@ class Facility
 
         return $this;
     }
+
+    public function __toString(){
+        return $this->name;
+ }
 }
