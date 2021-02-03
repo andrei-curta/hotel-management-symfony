@@ -25,6 +25,11 @@ class Appartment
     private $description;
 
     /**
+     * @ORM\Column(type="string", length=5, nullable=false)
+     */
+    private $number;
+
+    /**
      * @ORM\Column(type="smallint")
      */
     private $numberOfRooms;
@@ -59,6 +64,11 @@ class Appartment
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getNumber(): ?string
+    {
+        return $this->number;
     }
 
     public function getDescription(): ?string
@@ -176,5 +186,9 @@ class Appartment
         }
 
         return $this;
+    }
+
+    public function __toString(){
+        return $this->number;
     }
 }

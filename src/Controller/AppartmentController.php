@@ -35,7 +35,10 @@ class AppartmentController extends AbstractController
         $facilities = $this->getDoctrine()
             ->getRepository(Facility::class)->findAll();
 
-        $form = $this->createForm(AppartmentType::class, $appartment, $facilities);
+        $form = $this->createForm(AppartmentType::class, $appartment,  [
+            'facilities' => $facilities,
+        ]);
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

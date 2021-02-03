@@ -15,7 +15,7 @@ class ReservationType extends AbstractType
             ->add('startDate')
             ->add('endDate')
             ->add('totalPrice')
-            ->add('appartments')
+//            ->add('appartments')
         ;
     }
 
