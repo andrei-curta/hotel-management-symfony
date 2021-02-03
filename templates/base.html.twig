@@ -1,12 +1,55 @@
+{# templates/base.html.twig #}
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Evolution - Sala de fitness{% endblock %}</title>
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    {% block stylesheets%}
+{#        <link href="{{ asset('css/main.css') }}" rel="stylesheet"/>#}
+    {% endblock %}
+</head>
+<body>
+
+<!-- Header -->
+<header id="header" class="alt">
+{#    <div class="logo"><a href="{{ path('home') }}">Evolution Gym</a></div>#}
+    <a href="#menu" class="toggle"><span>Menu</span></a>
+</header>
+
+<!-- Nav -->
+<nav id="menu">
+    <ul class="links">
+        {% trans %}Hello{% endtrans %}
+{#        <li><a href="{{ path('home') }}">Acasa</a></li>#}
+{#        <li><a href="{{ path('trainers_index') }}">Antrenori</a></li>#}
+{#        <li><a href="{{ path('workouts_index') }}">Antrenamente</a></li>#}
+{#        <li><a href="{{ path('programs_index') }}">Programe</a></li>#}
+{#        <li><a href="{{ path('products') }}">Servicii/Tarife</a></li>#}
+        {% if app.user %}
+{#            <li><a href="{{ path('app_logout') }}">Logout</a></li>#}
+        {% else %}
+{#            <li><a href="{{ path('app_login') }}">Login</a></li>#}
+{#            <li><a href="{{ path('users_new') }}">Inregistrare</a></li>#}
+        {% endif %}
+    </ul>
+</nav>
+
+<div class="container">
+    {% block body %}{% endblock %} {% block javascripts %}{% endblock %}
+</div>
+
+</body>
+
+{% block script%}
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ asset('js/skel.min.js') }}"></script>
+    <script src="{{ asset('js/util.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+{% endblock %}
 </html>
