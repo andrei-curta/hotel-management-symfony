@@ -19,27 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="adaugat debug tools">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210204132722.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/EmailVerifier.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/confirmation_email.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" afterDir="false" />
+    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="adaugat login si register">
+      <change afterPath="$PROJECT_DIR$/templates/footer.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +42,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="56b7d0a5-8951-4234-b229-003f3d7f48f4" name="localhost" port="8012" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.0">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
@@ -182,7 +176,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -208,7 +202,10 @@
       <workItem from="1608140635275" duration="3042000" />
       <workItem from="1612299571160" duration="2430000" />
       <workItem from="1612344620998" duration="10442000" />
-      <workItem from="1612392560661" duration="17560000" />
+      <workItem from="1612392560661" duration="18090000" />
+      <workItem from="1612452072306" duration="189000" />
+      <workItem from="1612464633273" duration="169000" />
+      <workItem from="1612465625937" duration="8378000" />
     </task>
     <task id="LOCAL-00001" summary="project setup">
       <created>1606667435728</created>
@@ -294,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612441949595</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="adaugat login si register">
+      <created>1612451653239</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612451653239</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,13 +330,22 @@
     <MESSAGE value="adaugat main page" />
     <MESSAGE value="inceput de trimitere de mail" />
     <MESSAGE value="adaugat debug tools" />
-    <option name="LAST_COMMIT_MESSAGE" value="adaugat debug tools" />
+    <MESSAGE value="adaugat login si register" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaugat login si register" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-2967" y="-430" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612445786735">
+    <state x="-2963" y="-130" key="#CLI_Interpreters" timestamp="1612474791836">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2967" y="-430" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612445786735" />
+    <state x="-2963" y="-130" key="#CLI_Interpreters/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612474791836" />
+    <state x="-2979" y="-433" key="#Servers" timestamp="1612475492701">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state x="-2979" y="-433" key="#Servers/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612475492701" />
+    <state x="-3073" y="-430" width="981" height="682" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612467104772">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state x="-3073" y="-430" width="981" height="682" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612467104772" />
     <state x="-2765" y="-379" key="#com.intellij.ide.util.MemberChooser" timestamp="1612444973156">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -349,6 +362,54 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2957" y="-10" width="437" height="489" key="FileChooserDialogImpl/0.0.1536.824/-3840.-789.2560.1400@0.0.1536.824" timestamp="1608137915919" />
+    <state width="1258" height="492" key="GridCell.Tab.0.bottom" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.0.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
+    <state width="1258" height="492" key="GridCell.Tab.0.center" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.0.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
+    <state width="1258" height="492" key="GridCell.Tab.0.left" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.0.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
+    <state width="1258" height="492" key="GridCell.Tab.0.right" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.0.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
+    <state width="1258" height="492" key="GridCell.Tab.1.bottom" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.1.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
+    <state width="1258" height="492" key="GridCell.Tab.1.center" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.1.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
+    <state width="1258" height="492" key="GridCell.Tab.1.left" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.1.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
+    <state width="1258" height="492" key="GridCell.Tab.1.right" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.1.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
+    <state width="1258" height="492" key="GridCell.Tab.2.bottom" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.2.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
+    <state width="1258" height="492" key="GridCell.Tab.2.center" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.2.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
+    <state width="1258" height="492" key="GridCell.Tab.2.left" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.2.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
+    <state width="1258" height="492" key="GridCell.Tab.2.right" timestamp="1612476177538">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="1258" height="492" key="GridCell.Tab.2.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612476177538" />
     <state width="198" height="457" key="HiddenNamespacesPopup" timestamp="1612445393348">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -357,18 +418,22 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2793" y="-365" key="NewPhpClassDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612443332858" />
-    <state x="-3058" y="-443" key="SettingsEditor" timestamp="1612439783665">
+    <state x="-3058" y="-443" key="SettingsEditor" timestamp="1612475436542">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-3058" y="-443" key="SettingsEditor/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612439783665" />
+    <state x="-3058" y="-443" key="SettingsEditor/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612475436542" />
     <state x="-2797" y="-257" key="SimpleOpenTaskDialog" timestamp="1612439801810">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2797" y="-257" key="SimpleOpenTaskDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612439801810" />
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1612441952679">
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1612451655145">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612441952679" />
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612451655145" />
+    <state x="-2660" y="-211" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1612466918575">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state x="-2660" y="-211" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612466918575" />
     <state x="-2716" y="-315" width="761" height="453" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1612446575303">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -395,9 +460,14 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/RegistrationController.php</url>
+          <line>32</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php</url>
-          <line>83</line>
-          <option name="timeStamp" value="2" />
+          <line>92</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
