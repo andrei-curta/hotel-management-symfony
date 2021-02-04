@@ -19,19 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="inceput de trimitere de mail">
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/debug.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todos.md" afterDir="false" />
+    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="adaugat debug tools">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210204132722.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Security/EmailVerifier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/confirmation_email.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,6 +156,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kyJgcCUkNSVE5hWGyBBZGavhfi" />
@@ -161,6 +171,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../symfony_api-master" />
@@ -197,7 +208,7 @@
       <workItem from="1608140635275" duration="3042000" />
       <workItem from="1612299571160" duration="2430000" />
       <workItem from="1612344620998" duration="10442000" />
-      <workItem from="1612392560661" duration="8952000" />
+      <workItem from="1612392560661" duration="17560000" />
     </task>
     <task id="LOCAL-00001" summary="project setup">
       <created>1606667435728</created>
@@ -276,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612439088135</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="adaugat debug tools">
+      <created>1612441949595</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1612441949595</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,21 +325,38 @@
     <MESSAGE value="adaugat bootstrap" />
     <MESSAGE value="adaugat main page" />
     <MESSAGE value="inceput de trimitere de mail" />
-    <option name="LAST_COMMIT_MESSAGE" value="inceput de trimitere de mail" />
+    <MESSAGE value="adaugat debug tools" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaugat debug tools" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-2967" y="-430" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612445786735">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state x="-2967" y="-430" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612445786735" />
+    <state x="-2765" y="-379" key="#com.intellij.ide.util.MemberChooser" timestamp="1612444973156">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state x="-2765" y="-379" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612444973156" />
     <state x="-2902" y="-491" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607418263642">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2902" y="-491" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1607418263642" />
-    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612428160765">
+    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612450825002">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612428160765" />
+    <state x="-2829" y="-333" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612450825002" />
     <state x="-2957" y="-10" width="437" height="489" key="FileChooserDialogImpl" timestamp="1608137915919">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2957" y="-10" width="437" height="489" key="FileChooserDialogImpl/0.0.1536.824/-3840.-789.2560.1400@0.0.1536.824" timestamp="1608137915919" />
+    <state width="198" height="457" key="HiddenNamespacesPopup" timestamp="1612445393348">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state width="198" height="457" key="HiddenNamespacesPopup/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612445393348" />
+    <state x="-2793" y="-365" key="NewPhpClassDialog" timestamp="1612443332858">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state x="-2793" y="-365" key="NewPhpClassDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612443332858" />
     <state x="-3058" y="-443" key="SettingsEditor" timestamp="1612439783665">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -330,22 +365,26 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2797" y="-257" key="SimpleOpenTaskDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612439801810" />
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1612439091310">
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1612441952679">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612439091310" />
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612441952679" />
+    <state x="-2716" y="-315" width="761" height="453" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1612446575303">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state x="-2716" y="-315" width="761" height="453" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612446575303" />
     <state x="-2742" y="-174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607439017889">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2742" y="-174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1607439017889" />
-    <state x="-2853" y="-489" width="607" height="801" key="find.popup" timestamp="1612370798289">
+    <state x="-2853" y="-489" width="607" height="801" key="find.popup" timestamp="1612446840964">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2853" y="-489" width="607" height="801" key="find.popup/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612370798289" />
-    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup" timestamp="1612390111299">
+    <state x="-2853" y="-489" width="607" height="801" key="find.popup/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612446840964" />
+    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup" timestamp="1612446254004">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612390111299" />
+    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612446254004" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -354,6 +393,11 @@
           <url>file://$PROJECT_DIR$/src/Form/MailType.php</url>
           <line>11</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php</url>
+          <line>83</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
