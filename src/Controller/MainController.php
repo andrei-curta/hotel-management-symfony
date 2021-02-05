@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\AppartmentRepository;
 use App\Repository\FacilityRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,13 +15,12 @@ class MainController extends AbstractController
      * @param FacilityRepository $facilityRepository
      * @return Response
      */
-    public function index(FacilityRepository $facilityRepository): Response
+    public function index(FacilityRepository $facilityRepository, AppartmentRepository $appartmentRepository): Response
     {
-
-
         return $this->render('main/index.html.twig', [
             'controller_name' => 'MainController',
-            'facilities' => $facilityRepository->findAll()
+            'facilities' => $facilityRepository->findAll(),
+            'appartments' => $appartmentRepository->findAll()
         ]);
     }
 }
