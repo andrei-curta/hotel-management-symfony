@@ -20,24 +20,27 @@ class ContactMailController extends AbstractController
      * @param Request $request
      * @throws \Symfony\Component\Form\Exception\OutOfBoundsException
      */
-    public function sendEmail(MailerInterface $mailer, Request $request)
+    public function sendEmail(MailerInterface $mailer, Request $request): Response
     {
         $form = $this->createForm(MailType::class);
         $form->handleRequest($request);
 
+        if ($form->isSubmitted() && $form->isValid()) {
 
-        $email = (new Email())
-            ->from('hello@example.com')
-            ->to('you@example.com')
-            //->cc('cc@example.com')
-            //->bcc('bcc@example.com')
-            //->replyTo('fabien@example.com')
-            //->priority(Email::PRIORITY_HIGH)
-            ->subject("subject")
-            ->text('Sending emails is fun again!')
-            ->html('<p>See Twig integration for better HTML integration!</p>');
+            $data = $form->getData();
+            $email = (new Email())
+                ->from($data->email)
+                ->to("noreply@eaw.com")
+                //->cc('cc@example.com')
+                //->bcc('bcc@example.com')
+                //->replyTo('fabien@example.com')
+                //->priority(Email::PRIORITY_HIGH)
+                ->subject($data->subject)
+                ->text($data->message);
 
-        $mailer->send($email);
+            $mailer->send($email);
+        }
+
 
         return new Response();
     }
