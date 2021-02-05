@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ContactMailController extends AbstractController
@@ -16,6 +17,7 @@ class ContactMailController extends AbstractController
     /**
      * @Route("/email")
      * @param MailerInterface $mailer
+     * @param Request $request
      * @throws \Symfony\Component\Form\Exception\OutOfBoundsException
      */
     public function sendEmail(MailerInterface $mailer, Request $request)
@@ -31,13 +33,13 @@ class ContactMailController extends AbstractController
             //->bcc('bcc@example.com')
             //->replyTo('fabien@example.com')
             //->priority(Email::PRIORITY_HIGH)
-            ->subject($form->get("subject"))
+            ->subject("subject")
             ->text('Sending emails is fun again!')
             ->html('<p>See Twig integration for better HTML integration!</p>');
 
         $mailer->send($email);
 
-        // ...
+        return new Response();
     }
 
 }
