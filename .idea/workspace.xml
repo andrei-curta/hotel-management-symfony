@@ -19,11 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="randare dinamica de apartamente">
-      <change afterPath="$PROJECT_DIR$/templates/appartment/presentation.html.twig" afterDir="false" />
+    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="adaugat pagina de prezentare pt apartement">
+      <change afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/messages.en.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/messages.ro.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AppartmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AppartmentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/appartments_section.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/appartments_section.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes/annotations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/appartment/presentation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/appartment/presentation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,8 +115,6 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
-      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
-      <path value="$PROJECT_DIR$/vendor/webimpress/safe-writer" />
       <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
@@ -148,6 +157,8 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kyJgcCUkNSVE5hWGyBBZGavhfi" />
@@ -201,7 +212,8 @@
       <workItem from="1612392560661" duration="18090000" />
       <workItem from="1612452072306" duration="189000" />
       <workItem from="1612464633273" duration="169000" />
-      <workItem from="1612465625937" duration="27344000" />
+      <workItem from="1612465625937" duration="30858000" />
+      <workItem from="1612545310861" duration="920000" />
     </task>
     <task id="LOCAL-00001" summary="project setup">
       <created>1606667435728</created>
@@ -329,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612537619232</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="adaugat pagina de prezentare pt apartement">
+      <created>1612540164282</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1612540164282</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +386,8 @@
     <MESSAGE value="adaugat randare la facilitati" />
     <MESSAGE value="partially fixed adaugarea de apartament" />
     <MESSAGE value="randare dinamica de apartamente" />
-    <option name="LAST_COMMIT_MESSAGE" value="randare dinamica de apartamente" />
+    <MESSAGE value="adaugat pagina de prezentare pt apartement" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaugat pagina de prezentare pt apartement" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-2963" y="-130" key="#CLI_Interpreters" timestamp="1612474791836">
@@ -398,54 +418,54 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2957" y="-10" width="437" height="489" key="FileChooserDialogImpl/0.0.1536.824/-3840.-789.2560.1400@0.0.1536.824" timestamp="1608137915919" />
-    <state width="1741" height="330" key="GridCell.Tab.0.bottom" timestamp="1612538416894">
+    <state width="1258" height="492" key="GridCell.Tab.0.bottom" timestamp="1612545291185">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="1741" height="330" key="GridCell.Tab.0.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612538416894" />
-    <state width="1741" height="330" key="GridCell.Tab.0.center" timestamp="1612538416894">
+    <state width="1258" height="492" key="GridCell.Tab.0.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291185" />
+    <state width="1258" height="492" key="GridCell.Tab.0.center" timestamp="1612545291185">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="1741" height="330" key="GridCell.Tab.0.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612538416894" />
-    <state width="1741" height="330" key="GridCell.Tab.0.left" timestamp="1612538416894">
+    <state width="1258" height="492" key="GridCell.Tab.0.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291185" />
+    <state width="1258" height="492" key="GridCell.Tab.0.left" timestamp="1612545291184">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="1741" height="330" key="GridCell.Tab.0.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612538416894" />
-    <state width="1741" height="330" key="GridCell.Tab.0.right" timestamp="1612538416894">
+    <state width="1258" height="492" key="GridCell.Tab.0.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291184" />
+    <state width="1258" height="492" key="GridCell.Tab.0.right" timestamp="1612545291185">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="1741" height="330" key="GridCell.Tab.0.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612538416894" />
-    <state width="2517" height="482" key="GridCell.Tab.1.bottom" timestamp="1612530620957">
+    <state width="1258" height="492" key="GridCell.Tab.0.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291185" />
+    <state width="1258" height="492" key="GridCell.Tab.1.bottom" timestamp="1612545291187">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612530620957" />
-    <state width="2517" height="482" key="GridCell.Tab.1.center" timestamp="1612530620957">
+    <state width="1258" height="492" key="GridCell.Tab.1.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291187" />
+    <state width="1258" height="492" key="GridCell.Tab.1.center" timestamp="1612545291186">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612530620957" />
-    <state width="2517" height="482" key="GridCell.Tab.1.left" timestamp="1612530620957">
+    <state width="1258" height="492" key="GridCell.Tab.1.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291186" />
+    <state width="1258" height="492" key="GridCell.Tab.1.left" timestamp="1612545291186">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612530620957" />
-    <state width="2517" height="482" key="GridCell.Tab.1.right" timestamp="1612530620957">
+    <state width="1258" height="492" key="GridCell.Tab.1.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291186" />
+    <state width="1258" height="492" key="GridCell.Tab.1.right" timestamp="1612545291186">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612530620957" />
-    <state width="2517" height="482" key="GridCell.Tab.2.bottom" timestamp="1612530620957">
+    <state width="1258" height="492" key="GridCell.Tab.1.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291186" />
+    <state width="1258" height="492" key="GridCell.Tab.2.bottom" timestamp="1612545291187">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.2.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612530620957" />
-    <state width="2517" height="482" key="GridCell.Tab.2.center" timestamp="1612530620957">
+    <state width="1258" height="492" key="GridCell.Tab.2.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291187" />
+    <state width="1258" height="492" key="GridCell.Tab.2.center" timestamp="1612545291187">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.2.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612530620957" />
-    <state width="2517" height="482" key="GridCell.Tab.2.left" timestamp="1612530620957">
+    <state width="1258" height="492" key="GridCell.Tab.2.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291187" />
+    <state width="1258" height="492" key="GridCell.Tab.2.left" timestamp="1612545291187">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.2.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612530620957" />
-    <state width="2517" height="482" key="GridCell.Tab.2.right" timestamp="1612530620957">
+    <state width="1258" height="492" key="GridCell.Tab.2.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291187" />
+    <state width="1258" height="492" key="GridCell.Tab.2.right" timestamp="1612545291187">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.2.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612530620957" />
+    <state width="1258" height="492" key="GridCell.Tab.2.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612545291187" />
     <state width="198" height="457" key="HiddenNamespacesPopup" timestamp="1612445393348">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -462,10 +482,10 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2797" y="-257" key="SimpleOpenTaskDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612439801810" />
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1612537622314">
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1612540165826">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612537622314" />
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612540165826" />
     <state x="-2660" y="-211" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1612466918575">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -516,13 +536,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="index.php">
-        <watch expression="$form-&gt;getData()" language="PHP" />
-        <watch expression="$form-&gt;isValid()" language="PHP" />
-        <watch expression="error evaluating code" language="PHP" />
-        <watch expression="$form-&gt;isSubmitted()" language="PHP" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

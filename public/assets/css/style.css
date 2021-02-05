@@ -1163,6 +1163,15 @@ section {
   border-radius: 50px;
 }
 
+.bt {
+  background: #009970;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
 .contact .php-email-form button[type="submit"]:hover {
   background: #00805d;
 }
