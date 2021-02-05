@@ -71,6 +71,15 @@ class Appartment
         return $this->number;
     }
 
+    /**
+     * @param mixed $number
+     */
+    public function setNumber($number): void
+    {
+        $this->number = $number;
+    }
+
+
     public function getDescription(): ?string
     {
         return $this->description;
@@ -115,6 +124,14 @@ class Appartment
         return $this->facilities;
     }
 
+    /**
+     * @param ArrayCollection $facilities
+     */
+    public function setFacilities(ArrayCollection $facilities): void
+    {
+        $this->facilities = $facilities;
+    }
+
     public function addFacility(Facility $facility): self
     {
         if (!$this->facilities->contains($facility)) {
@@ -137,6 +154,14 @@ class Appartment
     public function getAppartmentPricings(): Collection
     {
         return $this->appartmentPricings;
+    }
+
+    /**
+     * @param ArrayCollection $appartmentPricings
+     */
+    public function setAppartmentPricings(ArrayCollection $appartmentPricings): void
+    {
+        $this->appartmentPricings = $appartmentPricings;
     }
 
     public function addAppartmentPricing(AppartmentPricing $appartmentPricing): self
@@ -167,6 +192,14 @@ class Appartment
     public function getReservations(): Collection
     {
         return $this->reservations;
+    }
+
+    /**
+     * @param ArrayCollection $reservations
+     */
+    public function setReservations(ArrayCollection $reservations): void
+    {
+        $this->reservations = $reservations;
     }
 
     public function addReservation(Reservation $reservation): self
