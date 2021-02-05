@@ -9,5 +9,5 @@
 - [ ] nota 10: integrarea unuia dintre serviciile: 
     - [ ] feed
     - [ ] web
-    - [ ] internationalizare
+    - [X] internationalizare
     - [ ] email

@@ -35,7 +35,7 @@ class Appartment
     private $numberOfRooms;
 
     /**
-     * @ORM\Column(type="blob", nullable=true)
+     * @ORM\Column(type="string", length=512, nullable=true)
      */
     private $image;
 
