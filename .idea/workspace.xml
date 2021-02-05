@@ -19,14 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="actualizat routes pt locale">
-      <change afterPath="$PROJECT_DIR$/public/assets/img/team/profile.png" afterDir="false" />
+    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="schimbat sectiunea Team">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/team/team-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/team/team-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/team/team-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/team/team-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/translations/messages.ro.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.ro.yaml" afterDir="false" />
     </list>
@@ -180,12 +174,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\hotel-management\src\Controller" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\hotel-management\templates\main" />
       <recent name="C:\xampp\htdocs\hotel-management" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hotel-management\src\Controller" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -207,7 +201,7 @@
       <workItem from="1612452072306" duration="189000" />
       <workItem from="1612464633273" duration="169000" />
       <workItem from="1612465625937" duration="30858000" />
-      <workItem from="1612545310861" duration="4533000" />
+      <workItem from="1612545310861" duration="5912000" />
     </task>
     <task id="LOCAL-00001" summary="project setup">
       <created>1606667435728</created>
@@ -356,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612551310294</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="schimbat sectiunea Team">
+      <created>1612553110339</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1612553110339</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +398,8 @@
     <MESSAGE value="adaugat pagina de prezentare pt apartement" />
     <MESSAGE value="adaugat traduceri" />
     <MESSAGE value="actualizat routes pt locale" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizat routes pt locale" />
+    <MESSAGE value="schimbat sectiunea Team" />
+    <option name="LAST_COMMIT_MESSAGE" value="schimbat sectiunea Team" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-2963" y="-130" key="#CLI_Interpreters" timestamp="1612474791836">
@@ -492,10 +494,10 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2797" y="-257" key="SimpleOpenTaskDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612439801810" />
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1612551312138">
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1612553111765">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612551312138" />
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612553111765" />
     <state x="-2660" y="-211" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1612466918575">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -516,10 +518,10 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2903" y="-63" key="run.anything.popup/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612512973293" />
-    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup" timestamp="1612514139507">
+    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup" timestamp="1612553694893">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612514139507" />
+    <state x="-2897" y="-474" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612553694893" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
