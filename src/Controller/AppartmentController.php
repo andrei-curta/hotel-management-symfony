@@ -35,7 +35,7 @@ class AppartmentController extends AbstractController
         $facilities = $this->getDoctrine()
             ->getRepository(Facility::class)->findAll();
 
-        $form = $this->createForm(AppartmentType::class, $appartment,  [
+        $form = $this->createForm(AppartmentType::class, $appartment, [
             'facilities' => $facilities,
         ]);
 
@@ -61,6 +61,16 @@ class AppartmentController extends AbstractController
     public function show(Appartment $appartment): Response
     {
         return $this->render('appartment/show.html.twig', [
+            'appartment' => $appartment,
+        ]);
+    }
+
+    /**
+     * @Route("/presentation/{id}", name="appartment_presentation", methods={"GET"})
+     */
+    public function presentation(Appartment $appartment): Response
+    {
+        return $this->render('appartment/presentation.html.twig', [
             'appartment' => $appartment,
         ]);
     }
