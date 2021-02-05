@@ -7,9 +7,11 @@ use App\Entity\Facility;
 use App\Form\AppartmentType;
 use App\Repository\AppartmentRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Uid\Uuid;
 
 /**
  * @Route("/appartment")
@@ -43,6 +45,19 @@ class AppartmentController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+
+            //file saving stuff
+            /**
+             * @var UploadedFile $file
+             */
+            $file = $request->files->get("appartment")["image"];
+            if ($file) {
+                $filename = Uuid::v4() . '.' . $file->guessClientExtension();
+
+                $file->move($this->getParameter('appartment_pictures_dir'), $filename);
+                $appartment->setImage($filename);
+            }
+
             $entityManager->persist($appartment);
             $entityManager->flush();
 

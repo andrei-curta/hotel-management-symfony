@@ -28,29 +28,7 @@ class AppartmentType extends AbstractType
             ->add('description')
             ->add('numberOfRooms')
             ->add('number')
-            ->add('image', FileType::class, [
-                'label' => 'Image',
-
-//                // unmapped means that this field is not associated to any entity property
-//                'mapped' => false,
-
-                // make it optional so you don't have to re-upload the PDF file
-                // every time you edit the Product details
-                'required' => false,
-
-                // unmapped fields can't define their validation using annotations
-                // in the associated entity, so you can use the PHP constraint classes
-//                'constraints' => [
-//                    new File([
-//                        'maxSize' => '5000k',
-//                        'mimeTypes' => [
-//                            'application/png',
-//                            'application/jpg',
-//                        ],
-//                        'mimeTypesMessage' => 'Please upload a valid image',
-//                    ])
-//                ],
-            ])
+            ->add('image', FileType::class, )
 //            ->add('facilities', FacilityType::class, [
 //                'choices' => $facilities,
 //                // "name" is a property path, meaning Symfony will look for a public

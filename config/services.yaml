@@ -7,6 +7,7 @@ parameters:
     locale: 'en'
     # This parameter defines the codes of the locales (languages) enabled in the application
     app_locales: 'en|ro'
+    appartment_pictures_dir: '%kernel.project_dir%/public/assets/img/appartments/'
 
 services:
     # default configuration for services in *this* file
