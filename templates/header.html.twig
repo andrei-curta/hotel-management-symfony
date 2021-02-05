@@ -2,32 +2,68 @@
     <div class="container">
         <div class="header-container d-flex align-items-center">
             <div class="logo mr-auto">
-                <h1 class="text-light"><a href={{ "/Hotel-Management/public/#{app.request.locale}/main#about" }}><span>Bethany</span></a></h1>
+                <h1 class="text-light"><a href={{ "/Hotel-Management/public/#{app.request.locale}/main#about" }}><span>Bethany</span></a>
+                </h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li class="active"><a
-                                href={{ "/Hotel-Management/public/#{app.request.locale}/main#about" }}>{% trans %}Home {% endtrans %}</a>
+                    <li class="active">
+                        <a href={{ "/Hotel-Management/public/#{app.request.locale}/main#about" }}>
+                            {% trans %} Home {% endtrans %}
+                        </a>
                     </li>
-                    <li><a href={{ "/Hotel-Management/public/#{app.request.locale}/main#about" }}>About</a></li>
-                    <li><a href={{ "/Hotel-Management/public/#{app.request.locale}/main#services" }}>Services</a></li>
-                    <li><a href={{ "/Hotel-Management/public/#{app.request.locale}/main#portfolio" }}>Portfolio</a></li>
-                    <li><a href={{ "/Hotel-Management/public/#{app.request.locale}/main#team" }}>Team</a></li>
-                    <li class="drop-down"><a href="">Drop Down</a>
+                    <li><a href={{ "/Hotel-Management/public/#{app.request.locale}/main#about" }}>
+                            {% trans %} About {% endtrans %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href={{ "/Hotel-Management/public/#{app.request.locale}/main#services" }}>
+                            {% trans %} Services {% endtrans %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href={{ "/Hotel-Management/public/#{app.request.locale}/main#portfolio" }}>
+                            {% trans %} Portfolio {% endtrans %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href={{ "/Hotel-Management/public/#{app.request.locale}/main#team" }}>
+                            {% trans %} Team {% endtrans %}
+                        </a>
+                    </li>
+                    <li class="drop-down">
+                        <a href="">
+                            Drop Down
+                        </a>
                         <ul>
-                            <li><a href={{ "/Hotel-Management/public/#{app.request.locale}/facility" }}>Facilities</a>
-                            </li>
-                            <li><a href={{ "/Hotel-Management/public/#{app.request.locale}/service" }}>Services</a></li>
-                            <li><a href={{ "/Hotel-Management/public/#{app.request.locale}/servicepricing" }}>Service
-                                    pricing</a></li>
                             <li>
-                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/appartment" }}>Appartments</a>
+                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/facility" }}>
+                                    {% trans %}  Facilities {% endtrans %}
+                                </a>
                             </li>
-                            <li><a href={{ "/Hotel-Management/public/#{app.request.locale}/appartmentpricing" }}>Appartment
-                                    pricing</a></li>
+                            <li>
+                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/service" }}>
+                                    {% trans %}   Services{% endtrans %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/servicepricing" }}>
+                                    {% trans %}  Service pricing{% endtrans %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/appartment" }}>
+                                    {% trans %} Appartments {% endtrans %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/appartmentpricing" }}>
+                                    {% trans %}   Appartment pricing {% endtrans %}
+                                </a>
+                            </li>
 
                             {# <li class="drop-down"><a href="#">Drop Down 2</a> #}
                             {# <ul> #}
@@ -41,12 +77,24 @@
 
                         </ul>
                     </li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a href="#contact">
+                            {% trans %} Contact  {% endtrans %}
+                        </a>
+                    </li>
 
                     {% if app.user == null %}
-                        <li class="get-started"><a href={{ "/Hotel-Management/public/#{app.request.locale}/login" }}>Login</a></li>
+                        <li class="get-started">
+                            <a href={{ "/Hotel-Management/public/#{app.request.locale}/login" }}>
+                                {% trans %}  Login {% endtrans %}
+                            </a>
+                        </li>
                     {% else %}
-                        <li class="get-started"><a href={{ "/Hotel-Management/public/#{app.request.locale}/logout" }}>Logout</a></li>
+                        <li class="get-started">
+                            <a href={{ "/Hotel-Management/public/#{app.request.locale}/logout" }}>
+                                {% trans %}  Logout {% endtrans %}
+                            </a>
+                        </li>
                     {% endif %}
                 </ul>
             </nav><!-- .nav-menu -->
