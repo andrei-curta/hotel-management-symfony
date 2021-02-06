@@ -158,15 +158,19 @@ class Appartment
     }
 
     /**
-     * @return Collection|AppartmentPricing[]
+     * @return AppartmentPricing
      */
-    public function getCurrentAppartmentPricing(): Collection
+    public function getCurrentAppartmentPricing(): AppartmentPricing
     {
-        $currentPricing = array_filter($this->appartmentPricings, function ($v) {
+        $currentPricing = array_filter($this->appartmentPricings->getValues(), function ($v) {
             return $v->getStartDate() <= new DateTime() && $v->getEndDate() >= new DateTime();
         });
 
-        return $currentPricing[0];
+        if ($currentPricing && count($currentPricing) > 0) {
+            return $currentPricing[0];
+        }
+        return new AppartmentPricing();
+
     }
 
     /**
