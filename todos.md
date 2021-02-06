@@ -10,4 +10,4 @@
     - [ ] feed
     - [ ] web
     - [X] internationalizare
-    - [ ] email
+    - [X] email

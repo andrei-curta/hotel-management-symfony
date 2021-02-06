@@ -65,14 +65,46 @@ class Reservation
     private $ID_User;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="date")
      */
     private $startDate;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @return mixed
+     */
+    public function getStartDate()
+    {
+        return $this->startDate;
+    }
+
+    /**
+     * @param mixed $startDate
+     */
+    public function setStartDate($startDate): void
+    {
+        $this->startDate = $startDate;
+    }
+
+    /**
+     * @ORM\Column(type="date")
      */
     private $endDate;
+
+    /**
+     * @return mixed
+     */
+    public function getEndDate()
+    {
+        return $this->endDate;
+    }
+
+    /**
+     * @param mixed $endDate
+     */
+    public function setEndDate($endDate): void
+    {
+        $this->endDate = $endDate;
+    }
 
     /**
      * @ORM\Column(type="decimal", precision=10, scale=2)
