@@ -99,6 +99,18 @@ class AppartmentController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            //file saving stuff
+            /**
+             * @var UploadedFile $file
+             */
+            $file = $request->files->get("appartment")["image"];
+            if ($file) {
+                $filename = Uuid::v4() . '.' . $file->guessClientExtension();
+
+                $file->move($this->getParameter('appartment_pictures_dir'), $filename);
+                $appartment->setImage($filename);
+            }
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('appartment_index');

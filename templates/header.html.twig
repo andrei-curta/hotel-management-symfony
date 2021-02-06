@@ -26,7 +26,7 @@
                     </li>
                     <li>
                         <a href={{ "/Hotel-Management/public/#{app.request.locale}/main#portfolio" }}>
-                            {% trans %} Portfolio {% endtrans %}
+                            {% trans %} Appartments {% endtrans %}
                         </a>
                     </li>
                     <li>
@@ -96,8 +96,49 @@
                             </a>
                         </li>
                     {% endif %}
+
+                    {% set req = app.request %}
+                    {% for locale in ["ro", "en"] %}
+{#                        {% if locale != req.getLocale() %}#}
+                            <link rel="alternate" hreflang="{{ locale }}" href="{{
+                            absolute_url(
+                                path(
+                                    req.attributes.get('_route'),
+                                    req.attributes.get('_route_params')|merge({'_locale': locale})
+                                )
+                            ) }}" />
+{#                        {% endif %}#}
+                    {% endfor %}
+
+{#                    <li onclick="changeLocale('ro')" class="{{ app.request.locale == 'ro' ? 'green-text' : '' }}">#}
+{#                        <a>#}
+{#                            RO#}
+{#                        </a>#}
+{#                    </li>#}
+
+{#                    <li onclick="changeLocale('en')" class="{{ app.request.locale == 'en' ? 'green-text' : '' }}">#}
+{#                        <a href="{{ localized_path('__current__', locale) }}">#}
+{#                            EN#}
+{#                        </a>#}
+{#                    </li>#}
+
                 </ul>
+
             </nav><!-- .nav-menu -->
         </div><!-- End Header Container -->
     </div>
 </header>
+
+<script>
+    changeLocale = (localeName) => {
+        const url = `http://localhost:8012/Hotel-Management/public/ro/locale/${localeName}`;
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", url, true);
+
+//Send the proper header information along with the request
+        xhr.setRequestHeader("Content-type", "application/json");
+
+        xhr.send();
+        console.log(localeName)
+    }
+</script>
