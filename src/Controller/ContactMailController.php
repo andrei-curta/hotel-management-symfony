@@ -25,21 +25,18 @@ class ContactMailController extends AbstractController
         $form = $this->createForm(MailType::class);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
 
-            $data = $form->getData();
-            $email = (new Email())
-                ->from($data->email)
-                ->to("noreply@eaw.com")
-                //->cc('cc@example.com')
-                //->bcc('bcc@example.com')
-                //->replyTo('fabien@example.com')
-                //->priority(Email::PRIORITY_HIGH)
-                ->subject($data->subject)
-                ->text($data->message);
+        $email = (new Email())
+            ->from($request->get('email'))
+            ->to("noreply@eaw.com")
+            //->cc('cc@example.com')
+            //->bcc('bcc@example.com')
+            //->replyTo('fabien@example.com')
+            //->priority(Email::PRIORITY_HIGH)
+            ->subject($request->get('subject'))
+            ->text($request->get("message"));
 
-            $mailer->send($email);
-        }
+        $mailer->send($email);
 
 
         return new Response();
