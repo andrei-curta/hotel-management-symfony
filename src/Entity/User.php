@@ -64,11 +64,33 @@ class User implements UserInterface, \Serializable
         return $this->userReservations;
     }
 
-    public function getRoles()
+    /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = [];
+
+    public function getRoles(): array
     {
-        return [
-            'ROLE_USER'
-        ];
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    /**
+     * @param array $roles
+     */
+    public function setRoles(array $roles): void
+    {
+        $this->roles = $roles;
+    }
+
+    public function addRole($role): void
+    {
+        if (!in_array($role, $this->roles)) {
+            $this->roles[] = $role;
+        }
     }
 
     public function getPassword()
