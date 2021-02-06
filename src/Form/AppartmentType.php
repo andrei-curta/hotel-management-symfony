@@ -11,6 +11,8 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -26,9 +28,13 @@ class AppartmentType extends AbstractType
 
         $builder
             ->add('description')
-            ->add('numberOfRooms')
-            ->add('number')
-            ->add('image', FileType::class, )
+            ->add('numberOfRooms', NumberType::class, [
+                "required" => true
+            ])
+            ->add('number', TextType::class, [
+                "required" => true
+            ])
+            ->add('image', FileType::class,)
 //            ->add('facilities', FacilityType::class, [
 //                'choices' => $facilities,
 //                // "name" is a property path, meaning Symfony will look for a public

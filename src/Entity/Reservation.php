@@ -65,6 +65,23 @@ class Reservation
     private $ID_User;
 
     /**
+     * @return mixed
+     */
+    public function getIDUser()
+    {
+        return $this->ID_User;
+    }
+
+    /**
+     * @param mixed $ID_User
+     */
+    public function setIDUser($ID_User): void
+    {
+        $this->ID_User = $ID_User;
+    }
+
+
+    /**
      * @ORM\Column(type="date")
      */
     private $startDate;
@@ -110,4 +127,22 @@ class Reservation
      * @ORM\Column(type="decimal", precision=10, scale=2)
      */
     private $totalPrice;
+
+    /**
+     * @return mixed
+     */
+    public function getTotalPrice()
+    {
+        return $this->totalPrice;
+    }
+
+    /**
+     * @param mixed $totalPrice
+     */
+    public function setTotalPrice($totalPrice): void
+    {
+        $this->totalPrice = $totalPrice;
+    }
+
+
 }

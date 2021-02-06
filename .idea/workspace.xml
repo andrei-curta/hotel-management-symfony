@@ -19,12 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="trimitere email">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210206155047.php" afterDir="false" />
+    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="phpunit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReservationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reservation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AppartmentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AppartmentType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/ReservationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ReservationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todos.md" beforeDir="false" afterPath="$PROJECT_DIR$/todos.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -428,7 +428,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612625404974</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="rezervare 1">
+      <created>1612628740139</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1612628740139</updated>
+    </task>
+    <task id="LOCAL-00032" summary="phpunit">
+      <created>1612629273690</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1612629273690</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,8 +462,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adaugat salvare in bd la facilitate" />
-    <MESSAGE value="adaugat form-uri si controllere" />
     <MESSAGE value="actualizat form-uri si controllere" />
     <MESSAGE value="adaugat swagger" />
     <MESSAGE value="adaugat bootstrap" />
@@ -473,7 +485,9 @@
     <MESSAGE value="rezolvat partea de pret" />
     <MESSAGE value="adaugat in repo partea de teste" />
     <MESSAGE value="trimitere email" />
-    <option name="LAST_COMMIT_MESSAGE" value="trimitere email" />
+    <MESSAGE value="rezervare 1" />
+    <MESSAGE value="phpunit" />
+    <option name="LAST_COMMIT_MESSAGE" value="phpunit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-2963" y="-130" key="#CLI_Interpreters" timestamp="1612474791836">
@@ -492,10 +506,10 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-3073" y="-430" width="981" height="682" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612467104772" />
-    <state x="-2765" y="-379" key="#com.intellij.ide.util.MemberChooser" timestamp="1612626199547">
+    <state x="-2765" y="-379" key="#com.intellij.ide.util.MemberChooser" timestamp="1612644453407">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2765" y="-379" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612626199547" />
+    <state x="-2765" y="-379" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612644453407" />
     <state x="-2902" y="-491" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607418263642">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -509,22 +523,22 @@
     </state>
     <state x="-2957" y="-10" key="FileChooserDialogImpl/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612614656393" />
     <state x="-2957" y="-10" width="437" height="489" key="FileChooserDialogImpl/0.0.1536.824/-3840.-789.2560.1400@0.0.1536.824" timestamp="1608137915919" />
-    <state width="2517" height="365" key="GridCell.Tab.0.bottom" timestamp="1612626553842">
+    <state width="1741" height="330" key="GridCell.Tab.0.bottom" timestamp="1612645094204">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="365" key="GridCell.Tab.0.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612626553842" />
-    <state width="2517" height="365" key="GridCell.Tab.0.center" timestamp="1612626553842">
+    <state width="1741" height="330" key="GridCell.Tab.0.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612645094204" />
+    <state width="1741" height="330" key="GridCell.Tab.0.center" timestamp="1612645094204">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="365" key="GridCell.Tab.0.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612626553842" />
-    <state width="2517" height="365" key="GridCell.Tab.0.left" timestamp="1612626553841">
+    <state width="1741" height="330" key="GridCell.Tab.0.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612645094204" />
+    <state width="1741" height="330" key="GridCell.Tab.0.left" timestamp="1612645094204">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="365" key="GridCell.Tab.0.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612626553841" />
-    <state width="2517" height="365" key="GridCell.Tab.0.right" timestamp="1612626553842">
+    <state width="1741" height="330" key="GridCell.Tab.0.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612645094204" />
+    <state width="1741" height="330" key="GridCell.Tab.0.right" timestamp="1612645094204">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="365" key="GridCell.Tab.0.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612626553842" />
+    <state width="1741" height="330" key="GridCell.Tab.0.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612645094204" />
     <state width="2517" height="365" key="GridCell.Tab.1.bottom" timestamp="1612626553843">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -565,6 +579,10 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2793" y="-365" key="NewPhpClassDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612618969740" />
+    <state x="-2878" y="-386" key="RollbackChangesDialog" timestamp="1612629037156">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state x="-2878" y="-386" key="RollbackChangesDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612629037156" />
     <state x="-3058" y="-443" key="SettingsEditor" timestamp="1612475436542">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -573,10 +591,10 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2797" y="-257" key="SimpleOpenTaskDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612439801810" />
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1612625406881">
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1612629289605">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612625406881" />
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612629289605" />
     <state x="-2660" y="-211" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1612466918575">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -585,10 +603,10 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2716" y="-315" width="761" height="453" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612562235010" />
-    <state x="-2732" y="-354" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1612622383136">
+    <state x="-2732" y="-354" width="579" height="531" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1612628829107">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2732" y="-354" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612622383136" />
+    <state x="-2732" y="-354" width="579" height="531" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612628829107" />
     <state x="-2742" y="-174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607439017889">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
