@@ -6,7 +6,7 @@ use App\Repository\AppartmentRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints\DateTime;
+
 
 /**
  * @ORM\Entity(repositoryClass=AppartmentRepository::class)
@@ -162,8 +162,9 @@ class Appartment
      */
     public function getCurrentAppartmentPricing(): AppartmentPricing
     {
+
         $currentPricing = array_filter($this->appartmentPricings->getValues(), function ($v) {
-            return $v->getStartDate() <= new DateTime() && $v->getEndDate() >= new DateTime();
+            return $v->getStartDate() <= new \DateTime() && $v->getEndDate() >= new \DateTime();
         });
 
         if ($currentPricing && count($currentPricing) > 0) {
