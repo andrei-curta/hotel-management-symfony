@@ -6,6 +6,12 @@ use App\Entity\Appartment;
 use App\Entity\Reservation;
 use App\Form\ReservationType;
 use App\Repository\ReservationRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\DBAL\Types\Type;
+use Doctrine\DBAL\Types\Types;
+use Doctrine\ORM\Query\Parameter;
+use Doctrine\ORM\Query\ResultSetMapping;
+use Doctrine\ORM\Query\ResultSetMappingBuilder;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -37,6 +43,29 @@ class ReservationController extends AbstractController
         return $numberOfDays * $price;
     }
 
+    private function isRoomAvabileInInterval(Appartment $appartment, $startDate, $endDate)
+    {
+
+        $sql = "select 1
+        from reservation
+                 inner join reservation_appartment ra on reservation.id = ra.reservation_id
+        where ra.appartment_id =" . $appartment->getId() . "
+          and (STR_TO_DATE( '".  $startDate->format('Y-m-d') . "','%Y-%m-%d') between start_date and end_date or STR_TO_DATE('" . $endDate->format('Y-m-d') . "','%Y-%m-%d') between start_date and end_date)";
+
+
+
+        $em = $this->getDoctrine()->getManager();
+        $stmt = $em->getConnection()->prepare($sql);
+//        $stmt->setParameter(':appartment_id',5);
+//        $stmt->setParameter(':startD', $startDate);
+//        $stmt->setParameter(':endD', $endDate);
+
+        $stmt->execute();
+        $reservations = $stmt->fetchAll();
+
+        return count($reservations) === 0;
+    }
+
     /**
      * @Route("/new", name="reservation_new", methods={"GET","POST"})
      */
@@ -50,6 +79,10 @@ class ReservationController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             //calculate the price and check if reservation is valid
+
+            if (!$this->isRoomAvabileInInterval($reservation->getAppartments()[0], $reservation->getStartDate(), $reservation->getEndDate())) {
+                return new Response("Appartment already reserved", Response::HTTP_FORBIDDEN);
+            }
 
             $reservation->setTotalPrice($this->calculateTotalPricePerAppartment($reservation->getStartDate(), $reservation->getEndDate(), $reservation->getAppartments()[0]));
 
