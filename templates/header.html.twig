@@ -34,49 +34,51 @@
                             {% trans %} Team {% endtrans %}
                         </a>
                     </li>
-                    <li class="drop-down">
-                        <a href="">
-                            Drop Down
-                        </a>
-                        <ul>
-                            <li>
-                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/facility" }}>
-                                    {% trans %}  Facilities {% endtrans %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/service" }}>
-                                    {% trans %}   Services{% endtrans %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/servicepricing" }}>
-                                    {% trans %}  Service pricing{% endtrans %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/appartment" }}>
-                                    {% trans %} Appartments {% endtrans %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/appartmentpricing" }}>
-                                    {% trans %}   Appartment pricing {% endtrans %}
-                                </a>
-                            </li>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li class="drop-down">
+                            <a href="">
+                                ADMIN
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href={{ "/Hotel-Management/public/#{app.request.locale}/facility" }}>
+                                        {% trans %}  Facilities {% endtrans %}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href={{ "/Hotel-Management/public/#{app.request.locale}/service" }}>
+                                        {% trans %}   Services{% endtrans %}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href={{ "/Hotel-Management/public/#{app.request.locale}/servicepricing" }}>
+                                        {% trans %}  Service pricing{% endtrans %}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href={{ "/Hotel-Management/public/#{app.request.locale}/appartment" }}>
+                                        {% trans %} Appartments {% endtrans %}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href={{ "/Hotel-Management/public/#{app.request.locale}/appartmentpricing" }}>
+                                        {% trans %}   Appartment pricing {% endtrans %}
+                                    </a>
+                                </li>
 
-                            {# <li class="drop-down"><a href="#">Drop Down 2</a> #}
-                            {# <ul> #}
-                            {# <li><a href="/facility">Deep Drop Down 1</a></li> #}
-                            {# <li><a href="#">Deep Drop Down 2</a></li> #}
-                            {# <li><a href="#">Deep Drop Down 3</a></li> #}
-                            {# <li><a href="#">Deep Drop Down 4</a></li> #}
-                            {# <li><a href="#">Deep Drop Down 5</a></li> #}
-                            {# </ul> #}
-                            {# </li> #}
+                                {# <li class="drop-down"><a href="#">Drop Down 2</a> #}
+                                {# <ul> #}
+                                {# <li><a href="/facility">Deep Drop Down 1</a></li> #}
+                                {# <li><a href="#">Deep Drop Down 2</a></li> #}
+                                {# <li><a href="#">Deep Drop Down 3</a></li> #}
+                                {# <li><a href="#">Deep Drop Down 4</a></li> #}
+                                {# <li><a href="#">Deep Drop Down 5</a></li> #}
+                                {# </ul> #}
+                                {# </li> #}
 
-                        </ul>
-                    </li>
+                            </ul>
+                        </li>
+                    {% endif %}
                     <li>
                         <a href="#contact">
                             {% trans %} Contact  {% endtrans %}
@@ -99,28 +101,27 @@
 
                     {% set req = app.request %}
                     {% for locale in ["ro", "en"] %}
-{#                        {% if locale != req.getLocale() %}#}
-                            <link rel="alternate" hreflang="{{ locale }}" href="{{
-                            absolute_url(
-                                path(
-                                    req.attributes.get('_route'),
-                                    req.attributes.get('_route_params')|merge({'_locale': locale})
-                                )
-                            ) }}" />
-{#                        {% endif %}#}
+                        {# {% if locale != req.getLocale() %} #}
+                        <link rel="alternate" hreflang="{{ locale }}" href="{{ absolute_url(
+                            path(
+                                req.attributes.get('_route'),
+                                req.attributes.get('_route_params')|merge({'_locale': locale})
+                            )
+                        ) }}"/>
+                        {# {% endif %} #}
                     {% endfor %}
 
-{#                    <li onclick="changeLocale('ro')" class="{{ app.request.locale == 'ro' ? 'green-text' : '' }}">#}
-{#                        <a>#}
-{#                            RO#}
-{#                        </a>#}
-{#                    </li>#}
+                    {# <li onclick="changeLocale('ro')" class="{{ app.request.locale == 'ro' ? 'green-text' : '' }}"> #}
+                    {# <a> #}
+                    {# RO #}
+                    {# </a> #}
+                    {# </li> #}
 
-{#                    <li onclick="changeLocale('en')" class="{{ app.request.locale == 'en' ? 'green-text' : '' }}">#}
-{#                        <a href="{{ localized_path('__current__', locale) }}">#}
-{#                            EN#}
-{#                        </a>#}
-{#                    </li>#}
+                    {# <li onclick="changeLocale('en')" class="{{ app.request.locale == 'en' ? 'green-text' : '' }}"> #}
+                    {# <a href="{{ localized_path('__current__', locale) }}"> #}
+                    {# EN #}
+                    {# </a> #}
+                    {# </li> #}
 
                 </ul>
 

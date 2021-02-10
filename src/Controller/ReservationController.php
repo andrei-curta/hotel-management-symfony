@@ -38,7 +38,6 @@ class ReservationController extends AbstractController
     {
         $numberOfDays = $endDate->diff($startDate)->format("%a");
 
-        //todo: tinut cont de suprapuneri de perioade
         $price = $appartment->getCurrentAppartmentPricing()->getPrice();
 
         return $numberOfDays * $price;
