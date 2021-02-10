@@ -13,6 +13,7 @@ use Doctrine\ORM\Query\Parameter;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\Query\ResultSetMappingBuilder;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -50,8 +51,7 @@ class ReservationController extends AbstractController
         from reservation
                  inner join reservation_appartment ra on reservation.id = ra.reservation_id
         where ra.appartment_id =" . $appartment->getId() . "
-          and (STR_TO_DATE( '".  $startDate->format('Y-m-d') . "','%Y-%m-%d') between start_date and end_date or STR_TO_DATE('" . $endDate->format('Y-m-d') . "','%Y-%m-%d') between start_date and end_date)";
-
+          and (STR_TO_DATE( '" . $startDate->format('Y-m-d') . "','%Y-%m-%d') between start_date and end_date or STR_TO_DATE('" . $endDate->format('Y-m-d') . "','%Y-%m-%d') between start_date and end_date)";
 
 
         $em = $this->getDoctrine()->getManager();
@@ -77,24 +77,29 @@ class ReservationController extends AbstractController
         $form = $this->createForm(ReservationType::class, $reservation);
         $form->handleRequest($request);
 
+
         if ($form->isSubmitted() && $form->isValid()) {
             //calculate the price and check if reservation is valid
 
-            if (!$this->isRoomAvabileInInterval($reservation->getAppartments()[0], $reservation->getStartDate(), $reservation->getEndDate())) {
-                return new Response("Appartment already reserved", Response::HTTP_FORBIDDEN);
+            if ($reservation->getAppartments()->isEmpty()) {
+                $form->addError(new FormError("No appartment selected"));
+            } elseif (!$this->isRoomAvabileInInterval($reservation->getAppartments()[0], $reservation->getStartDate(), $reservation->getEndDate())) {
+                $err = new FormError("Appartment already reserved in that interval");
+                $form->addError($err);
+            } else {
+
+                $reservation->setTotalPrice($this->calculateTotalPricePerAppartment($reservation->getStartDate(), $reservation->getEndDate(), $reservation->getAppartments()[0]));
+
+                //set the current user as the person who reserves
+                dump($tokenStorage->getToken()->getUser());
+                $reservation->setIDUser($tokenStorage->getToken()->getUser());
+
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->persist($reservation);
+                $entityManager->flush();
+
+                return $this->redirectToRoute('reservation_index');
             }
-
-            $reservation->setTotalPrice($this->calculateTotalPricePerAppartment($reservation->getStartDate(), $reservation->getEndDate(), $reservation->getAppartments()[0]));
-
-            //set the current user as the person who reserves
-            dump($tokenStorage->getToken()->getUser());
-            $reservation->setIDUser($tokenStorage->getToken()->getUser());
-
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($reservation);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('reservation_index');
         }
 
         return $this->render('reservation/new.html.twig', [
