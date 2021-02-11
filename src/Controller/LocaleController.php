@@ -18,8 +18,8 @@ class LocaleController extends AbstractController
      */
     public function setLocale(Request $request, $localeName): Response
     {
-        $this->get('session')->set('_locale', $localeName);
+        $request->attributes->set('_locale', null);
         $request->setLocale($localeName);
-        return new Response();
+
     }
 }

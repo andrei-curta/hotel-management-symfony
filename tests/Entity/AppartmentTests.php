@@ -3,23 +3,29 @@
 
 use App\Entity\Appartment;
 use App\Entity\AppartmentPricing;
+use App\Exception\BusinessLogicException;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Validator\Constraints\DateTime;
 
 class AppartmentTests extends TestCase
 {
-    public function testGet()
+    /**
+     * @dataProvider testSetNumberOfRooms_ShouldThrowException_Data
+     */
+    public function testSetNumberOfRooms_ShouldThrowException($input)
     {
-//        $appartment = new Appartment();
-//        $appartmentPricing = new AppartmentPricing();
-//
-//
-//        $date = new Date();
-//        $appartmentPricing->setEndDate(date_add($date, date_interval_create_from_date_string("10 days")));
-//
-//        $appartment->setAppartmentPricings(
-//            [$appartmentPricing]
-//        );
+        $this->expectException(BusinessLogicException::class);
 
+        $appartment = new Appartment();
+        $appartment->setNumberOfRooms($input);
+
+    }
+
+    public function testSetNumberOfRooms_ShouldThrowException_Data(): array
+    {
+        return [
+            [0],
+            [-1]
+        ];
     }
 }

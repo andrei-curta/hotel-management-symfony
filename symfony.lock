@@ -200,6 +200,9 @@
     "symfony/asset": {
         "version": "v5.1.11"
     },
+    "symfony/browser-kit": {
+        "version": "v5.1.11"
+    },
     "symfony/cache": {
         "version": "v5.1.9"
     },
@@ -244,6 +247,9 @@
     },
     "symfony/doctrine-bridge": {
         "version": "v5.1.9"
+    },
+    "symfony/dom-crawler": {
+        "version": "v5.1.11"
     },
     "symfony/dotenv": {
         "version": "v5.1.9"

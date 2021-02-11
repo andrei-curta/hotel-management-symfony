@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
+use App\Exception\BusinessLogicException;
 use App\Repository\AppartmentRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Exception\InvalidArgumentException;
 
 
 /**
@@ -100,6 +102,10 @@ class Appartment
 
     public function setNumberOfRooms(int $numberOfRooms): self
     {
+        if($numberOfRooms < 1){
+           throw new BusinessLogicException(" is required");
+        }
+
         $this->numberOfRooms = $numberOfRooms;
 
         return $this;
