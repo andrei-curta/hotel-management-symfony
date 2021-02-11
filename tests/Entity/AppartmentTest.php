@@ -25,4 +25,22 @@ class AppartmentTest extends TestCase
             [1], [100]
         ];
     }
+
+    /**
+     * @dataProvider setNumberOfRoomsInvalidData
+     */
+    public function testSetNumberOfInvalidRooms($input)
+    {
+        $appartment = new Appartment();
+        $appartment->setNumberOfRooms($input);
+
+        $this->assertEquals($appartment->getNumberOfRooms(), $input);
+    }
+
+    public function setNumberOfRoomsInvalidData()
+    {
+        return [
+            [1], [100]
+        ];
+    }
 }
