@@ -111,17 +111,16 @@
                         {# {% endif %} #}
                     {% endfor %}
 
-                     <li onclick="changeLocale('ro')" class="{{ app.request.locale == 'ro' ? 'green-text' : '' }}">
-                     <a>
-                     RO
-                     </a>
-                     </li>
-
-                     <li onclick="changeLocale('en')" class="{{ app.request.locale == 'en' ? 'green-text' : '' }}">
-{#                     <a href="{{ localized_path('__current__', locale) }}">#}
-{#                     EN#}
-{#                     </a>#}
-                     </li>
+                    <li class="{{ app.request.locale == 'ro' ? 'green-text' : '' }}">
+                        <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'ro'})) }}">
+                            RO
+                        </a>
+                    </li>
+                    <li class="{{ app.request.locale == 'en' ? 'green-text' : '' }}">
+                        <a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">
+                            EN
+                        </a>
+                    </li>
 
                 </ul>
 
