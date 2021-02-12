@@ -19,25 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="adaugat posibilitatea de a adauga facilitati la apartament">
-      <change afterPath="$PROJECT_DIR$/config/packages/nelmio_api_doc.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/nelmio_api_doc.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210212081809.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controller/FacilityControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controller/SecurityControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hotel-management-symfony.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="test functional">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Appartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Appartment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AppartmentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AppartmentType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Controller/SecurityControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/SecurityControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,17 +193,17 @@
       <recent name="C:\xampp\htdocs\hotel-management" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.SecurityControllerTest.testLoginButtonTextChanged">
+  <component name="RunManager" selected="PHPUnit.SecurityControllerTest.testAdminSectionNotDisplayedForUser">
     <configuration name="AppartmentTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\Tests\Entity\AppartmentTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Entity/AppartmentTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="AppartmentTest.testSetNumberOfInvalidRooms" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="App\Tests\Entity\AppartmentTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Entity/AppartmentTest.php" method="testSetNumberOfInvalidRooms" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="SecurityControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\Tests\Controller\SecurityControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Controller/SecurityControllerTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SecurityControllerTest.testAdminSectionNotDisplayedForUser" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Controller\SecurityControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Controller/SecurityControllerTest.php" method="testAdminSectionNotDisplayedForUser" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="SecurityControllerTest.testLogin" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -230,11 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.SecurityControllerTest.testAdminSectionNotDisplayedForUser" />
+        <item itemvalue="PHPUnit.SecurityControllerTest" />
         <item itemvalue="PHPUnit.SecurityControllerTest.testLoginButtonTextChanged" />
         <item itemvalue="PHPUnit.SecurityControllerTest.testLogin" />
-        <item itemvalue="PHPUnit.SecurityControllerTest" />
         <item itemvalue="PHPUnit.AppartmentTest" />
-        <item itemvalue="PHPUnit.AppartmentTest.testSetNumberOfInvalidRooms" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +248,7 @@
       <workItem from="1612970533131" duration="11537000" />
       <workItem from="1612987993185" duration="1033000" />
       <workItem from="1613059476739" duration="21723000" />
-      <workItem from="1613123440432" duration="1389000" />
+      <workItem from="1613123440432" duration="3284000" />
     </task>
     <task id="LOCAL-00001" summary="project setup">
       <created>1606667435728</created>
@@ -558,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613117770386</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="test functional">
+      <created>1613124954023</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1613124954023</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +571,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="randare dinamica de apartamente" />
     <MESSAGE value="adaugat pagina de prezentare pt apartement" />
     <MESSAGE value="adaugat traduceri" />
     <MESSAGE value="actualizat routes pt locale" />
@@ -603,7 +595,8 @@
     <MESSAGE value="teste" />
     <MESSAGE value="logging" />
     <MESSAGE value="adaugat posibilitatea de a adauga facilitati la apartament" />
-    <option name="LAST_COMMIT_MESSAGE" value="adaugat posibilitatea de a adauga facilitati la apartament" />
+    <MESSAGE value="test functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="test functional" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-2963" y="-130" key="#CLI_Interpreters" timestamp="1612474791836">
@@ -643,25 +636,25 @@
     </state>
     <state x="-2957" y="-10" key="FileChooserDialogImpl/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612614656393" />
     <state x="-2957" y="-10" width="437" height="489" key="FileChooserDialogImpl/0.0.1536.824/-3840.-789.2560.1400@0.0.1536.824" timestamp="1608137915919" />
-    <state width="2517" height="538" key="GridCell.Tab.0.bottom" timestamp="1613124622158">
+    <state width="2517" height="538" key="GridCell.Tab.0.bottom" timestamp="1613126345355">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="538" key="GridCell.Tab.0.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613124622158" />
+    <state width="2517" height="538" key="GridCell.Tab.0.bottom/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613126345355" />
     <state width="1493" height="153" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612891618681" />
-    <state width="2517" height="538" key="GridCell.Tab.0.center" timestamp="1613124622158">
+    <state width="2517" height="538" key="GridCell.Tab.0.center" timestamp="1613126345354">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="538" key="GridCell.Tab.0.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613124622158" />
+    <state width="2517" height="538" key="GridCell.Tab.0.center/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613126345354" />
     <state width="1493" height="153" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612891618681" />
-    <state width="2517" height="538" key="GridCell.Tab.0.left" timestamp="1613124622157">
+    <state width="2517" height="538" key="GridCell.Tab.0.left" timestamp="1613126345352">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="538" key="GridCell.Tab.0.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613124622157" />
+    <state width="2517" height="538" key="GridCell.Tab.0.left/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613126345352" />
     <state width="1493" height="153" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612891618681" />
-    <state width="2517" height="538" key="GridCell.Tab.0.right" timestamp="1613124622158">
+    <state width="2517" height="538" key="GridCell.Tab.0.right" timestamp="1613126345354">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state width="2517" height="538" key="GridCell.Tab.0.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613124622158" />
+    <state width="2517" height="538" key="GridCell.Tab.0.right/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613126345354" />
     <state width="1493" height="153" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612891618681" />
     <state width="2517" height="337" key="GridCell.Tab.1.bottom" timestamp="1613124207211">
       <screen x="-3840" y="-789" width="2560" height="1400" />
@@ -723,10 +716,10 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2797" y="-257" key="SimpleOpenTaskDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612439801810" />
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1613117771884">
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1613124992226">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613117771884" />
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613124992226" />
     <state x="-2660" y="-211" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1612466918575">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>

@@ -24,4 +24,39 @@ class SecurityControllerTest extends WebTestCase
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('#btnLoginLogout', 'Logout');
     }
+
+    public function testAdminSectionDisplayedForAdmin()
+    {
+        $client = static::createClient();
+        $userRepository = static::$container->get(UserRepository::class);
+
+        // retrieve the test user
+        $testUser = $userRepository->findOneByEmail('admin@gmail.com');
+
+        // simulate $testUser being logged in
+        $client->loginUser($testUser);
+
+        // test the home page
+        $client->request('GET', '/en/main');
+        $this->assertResponseIsSuccessful();
+        $this->assertSelectorExists('#adminDropdown');
+    }
+
+    public function testAdminSectionNotDisplayedForUser()
+    {
+        $client = static::createClient();
+        $userRepository = static::$container->get(UserRepository::class);
+
+        // retrieve the test user
+        $testUser = $userRepository->findOneByEmail('test@gmail.com');
+
+        // simulate $testUser being logged in
+        $client->loginUser($testUser);
+
+        // test the home page
+        $client->request('GET', '/en/main');
+        $this->assertResponseIsSuccessful();
+        $this->assertSelectorNotExists('#adminDropdown');
+    }
+
 }
