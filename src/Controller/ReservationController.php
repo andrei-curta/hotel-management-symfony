@@ -44,11 +44,14 @@ class ReservationController extends AbstractController
         return $numberOfDays * $price;
     }
 
-    private function calculateTotalServicesPrice(array $services)
+    public function calculateTotalServicesPrice(array $services)
     {
+        $sum = 0;
 
-
-
+        foreach ($services as $key => $value) {
+            if (isset($value->price))
+                $sum += $value->price;
+        }
     }
 
     private function isRoomAvabileInInterval(Appartment $appartment, $startDate, $endDate)
@@ -94,7 +97,10 @@ class ReservationController extends AbstractController
                 $form->addError($err);
             } else {
 
-                $reservation->setTotalPrice($this->calculateTotalPricePerAppartment($reservation->getStartDate(), $reservation->getEndDate(), $reservation->getAppartments()[0]));
+                $appartmentPrice = $this->calculateTotalPricePerAppartment($reservation->getStartDate(), $reservation->getEndDate(), $reservation->getAppartments()[0]);
+                $servicesPrice = $this->calculateTotalServicesPrice($reservation->getServices());
+
+                $reservation->setTotalPrice($appartmentPrice + $servicesPrice);
 
                 //set the current user as the person who reserves
                 dump($tokenStorage->getToken()->getUser());

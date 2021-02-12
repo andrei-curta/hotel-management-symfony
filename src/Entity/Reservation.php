@@ -174,5 +174,15 @@ class Reservation
         return $this;
     }
 
+    public function calculateTotalServicesPrice()
+    {
+        $sum = 0;
+
+        foreach ($this->services as $service) {
+            $sum += $service->getPrice();
+        }
+
+        return $sum;
+    }
 
 }

@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="adaugat servicii la rezervare">
+    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="adaugat servicii la rezervare show">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reservation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/reservation/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reservation/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -246,14 +248,7 @@
       <workItem from="1612970533131" duration="11537000" />
       <workItem from="1612987993185" duration="1033000" />
       <workItem from="1613059476739" duration="21723000" />
-      <workItem from="1613123440432" duration="8413000" />
-    </task>
-    <task id="LOCAL-00001" summary="project setup">
-      <created>1606667435728</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1606667435728</updated>
+      <workItem from="1613123440432" duration="9292000" />
     </task>
     <task id="LOCAL-00002" summary="adaugat useri si securitate">
       <created>1606672625294</created>
@@ -591,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613132620041</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="adaugat servicii la rezervare show">
+      <created>1613133004782</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1613133004782</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +613,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="modificat campul imagine" />
     <MESSAGE value="incarcare de fisiere" />
     <MESSAGE value="inceput unit testing" />
     <MESSAGE value="rezolvat partea de pret" />
@@ -636,7 +637,8 @@
     <MESSAGE value="actualizat pagina de apartament" />
     <MESSAGE value="adaugat vizualizare facilitati in apartament" />
     <MESSAGE value="adaugat servicii la rezervare" />
-    <option name="LAST_COMMIT_MESSAGE" value="adaugat servicii la rezervare" />
+    <MESSAGE value="adaugat servicii la rezervare show" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaugat servicii la rezervare show" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-2963" y="-130" key="#CLI_Interpreters" timestamp="1612474791836">
@@ -756,10 +758,10 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2797" y="-257" key="SimpleOpenTaskDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612439801810" />
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1613132626138">
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1613133007497">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613132626138" />
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613133007497" />
     <state x="-2660" y="-211" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1612466918575">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
@@ -768,6 +770,10 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2716" y="-315" width="761" height="453" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612562235010" />
+    <state x="-2954" y="-478" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613133570718">
+      <screen x="-3840" y="-789" width="2560" height="1400" />
+    </state>
+    <state x="-2954" y="-478" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613133570718" />
     <state x="-2732" y="-354" width="579" height="531" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1612628829107">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>

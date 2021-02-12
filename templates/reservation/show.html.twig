@@ -32,6 +32,10 @@
             <td>{{ service.price }}</td>
         </tr>
         {% endfor %}
+        <tr>
+            <th>Total</th>
+            <td>{{ reservation.calculateTotalServicesPrice }}</td>
+        </tr>
         </tbody>
     </table>
 
