@@ -34,6 +34,7 @@ class AppartmentType extends AbstractType
             ->add('number', TextType::class, [
                 "required" => true
             ])
+
             ->add('image', FileType::class,)
 //            ->add('facilities', FacilityType::class, [
 //                'choices' => $facilities,
@@ -54,6 +55,7 @@ class AppartmentType extends AbstractType
 //                },
 //
 //            ])
+            ->add('facilities')
         ;
     }
 

@@ -3,6 +3,7 @@
 namespace App\EventSubscriber;
 
 use App\Exception\BusinessLogicException;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,6 +12,14 @@ use Symfony\Component\HttpKernel\KernelEvents;
 
 class ExceptionEventSubscriber implements EventSubscriberInterface
 {
+
+    private LoggerInterface $logger;
+
+    public function __construct(LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+    }
+
     public static function getSubscribedEvents()
     {
         return [
@@ -26,8 +35,8 @@ class ExceptionEventSubscriber implements EventSubscriberInterface
                 'message' => $exception->getMessage(),
             ], Response::HTTP_BAD_REQUEST));
         } else {
-            $logger = $this->get('logger');
-            $logger->error($exception->getMessage());
+
+            $this->logger->error($exception->getMessage());
         }
         //Allow the kernel deal with the exception
         return $exception;
