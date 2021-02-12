@@ -25,6 +25,8 @@ use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
+
+
 /**
  * @Route("/reservation")
  */
@@ -118,6 +120,12 @@ class ReservationController extends AbstractController
             } elseif (!$this->isRoomAvabileInInterval($reservation->getAppartments()[0], $reservation->getStartDate(), $reservation->getEndDate())) {
                 $err = new FormError("Appartment already reserved in that interval");
                 $form->addError($err);
+            } elseif ($reservation->getStartDate() < new \DateTime()) {
+                $err = new FormError("Appartment cannot be reserved for a date in the past");
+                $form->addError($err);
+            } elseif ($reservation->getEndDate() < $reservation->getStartDate()) {
+                $err = new FormError("End date cannot be before start date");
+                $form->addError($err);
             } else {
 
                 $appartmentPrice = $this->calculateTotalPricePerAppartment($reservation->getStartDate(), $reservation->getEndDate(), $reservation->getAppartments()[0]);
@@ -147,8 +155,8 @@ class ReservationController extends AbstractController
 
                 $mailer->send($email);
 
-
-                return $this->redirectToRoute('main');
+                $reservationId = $reservation->getId();
+                return $this->redirectToRoute('reservation_show', ['id' => $reservationId]);
             }
         }
 

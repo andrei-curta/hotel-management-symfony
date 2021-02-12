@@ -85,6 +85,12 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href={{ "/Hotel-Management/public/#{app.request.locale}/reservation" }}>
+                            {% trans %} Reservations  {% endtrans %}
+                        </a>
+                    </li>
+
                     {% if app.user == null %}
                         <li class="get-started">
                             <a href={{ "/Hotel-Management/public/#{app.request.locale}/login" }}>
