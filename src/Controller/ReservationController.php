@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Appartment;
 use App\Entity\Reservation;
 use App\Entity\Service;
+use App\Entity\User;
 use App\Form\ReservationType;
 use App\Repository\ReservationRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -13,6 +14,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Query\Parameter;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\Query\ResultSetMappingBuilder;
+use phpDocumentor\Reflection\PseudoTypes\True_;
 use phpDocumentor\Reflection\Types\Null_;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormError;
@@ -49,6 +51,17 @@ class ReservationController extends AbstractController
         return $this->render('reservation/index.html.twig', [
             'reservations' => $reservations,
         ]);
+    }
+
+    private function hasAccessToReservation(User $user, Reservation $reservation): bool
+    {
+        if (in_array('ROLE_ADMIN', $user->getRoles())) {
+            return True;
+        } elseif ($reservation->getIDUser()->getId() == $user->getId()) {
+            return True;
+        } else {
+            return False;
+        }
     }
 
     private function calculateTotalPricePerAppartment($startDate, $endDate, Appartment $appartment)
@@ -148,8 +161,13 @@ class ReservationController extends AbstractController
     /**
      * @Route("/{id}", name="reservation_show", methods={"GET"})
      */
-    public function show(Reservation $reservation): Response
+    public function show(Reservation $reservation, TokenStorageInterface $tokenStorage): Response
     {
+        $user = $tokenStorage->getToken()->getUser();
+        if (!$this->hasAccessToReservation($user, $reservation)) {
+            return new Response("You do not have access to this reservation", Response::HTTP_FORBIDDEN);
+        }
+
         return $this->render('reservation/show.html.twig', [
             'reservation' => $reservation,
         ]);
@@ -158,8 +176,13 @@ class ReservationController extends AbstractController
     /**
      * @Route("/{id}/edit", name="reservation_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Reservation $reservation): Response
+    public function edit(Request $request, Reservation $reservation, TokenStorageInterface $tokenStorage): Response
     {
+        $user = $tokenStorage->getToken()->getUser();
+        if (!$this->hasAccessToReservation($user, $reservation)) {
+            return new Response("You do not have access to this reservation", Response::HTTP_FORBIDDEN);
+        }
+
         $form = $this->createForm(ReservationType::class, $reservation);
         $form->handleRequest($request);
 
@@ -178,8 +201,13 @@ class ReservationController extends AbstractController
     /**
      * @Route("/{id}", name="reservation_delete", methods={"DELETE"})
      */
-    public function delete(Request $request, Reservation $reservation): Response
+    public function delete(Request $request, Reservation $reservation, TokenStorageInterface $tokenStorage): Response
     {
+        $user = $tokenStorage->getToken()->getUser();
+        if (!$this->hasAccessToReservation($user, $reservation)) {
+            return new Response("You do not have access to this reservation", Response::HTTP_FORBIDDEN);
+        }
+
         if ($this->isCsrfTokenValid('delete' . $reservation->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($reservation);
