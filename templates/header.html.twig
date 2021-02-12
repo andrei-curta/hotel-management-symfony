@@ -92,7 +92,7 @@
                             </a>
                         </li>
                     {% else %}
-                        <li class="get-started">
+                        <li class="get-started" id="btnLoginLogout">
                             <a href={{ "/Hotel-Management/public/#{app.request.locale}/logout" }}>
                                 {% trans %}  Logout {% endtrans %}
                             </a>
@@ -129,16 +129,3 @@
     </div>
 </header>
 
-<script>
-    changeLocale = (localeName) => {
-        const url = `http://localhost:8012/Hotel-Management/public/ro/locale/${localeName}`;
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", url, true);
-
-//Send the proper header information along with the request
-        xhr.setRequestHeader("Content-type", "application/json");
-
-        xhr.send();
-        console.log(localeName)
-    }
-</script>

@@ -34,7 +34,7 @@ class AppartmentType extends AbstractType
             ->add('number', TextType::class, [
                 "required" => true
             ])
-
+            ->add('location')
             ->add('image', FileType::class,)
 //            ->add('facilities', FacilityType::class, [
 //                'choices' => $facilities,
@@ -55,8 +55,7 @@ class AppartmentType extends AbstractType
 //                },
 //
 //            ])
-            ->add('facilities')
-        ;
+            ->add('facilities', ChoiceType::class );
     }
 
     public function configureOptions(OptionsResolver $resolver)
@@ -65,6 +64,6 @@ class AppartmentType extends AbstractType
             'data_class' => Appartment::class,
         ]);
 
-        $resolver->setRequired('facilities');
+       $resolver->setRequired('facilities');
     }
 }

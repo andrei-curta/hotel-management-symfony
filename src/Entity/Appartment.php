@@ -57,6 +57,11 @@ class Appartment
      */
     private $reservations;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Location;
+
     public function __construct()
     {
         $this->facilities = new ArrayCollection();
@@ -248,5 +253,17 @@ class Appartment
     public function __toString()
     {
         return $this->number;
+    }
+
+    public function getLocation(): ?string
+    {
+        return $this->Location;
+    }
+
+    public function setLocation(?string $Location): self
+    {
+        $this->Location = $Location;
+
+        return $this;
     }
 }
