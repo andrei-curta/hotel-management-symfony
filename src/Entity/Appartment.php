@@ -62,6 +62,16 @@ class Appartment
      */
     private $Location;
 
+    /**
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(type="decimal", precision=10, scale=2)
+     */
+    private $basePrice;
+
     public function __construct()
     {
         $this->facilities = new ArrayCollection();
@@ -263,6 +273,30 @@ class Appartment
     public function setLocation(?string $Location): self
     {
         $this->Location = $Location;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(?string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getBasePrice(): ?string
+    {
+        return $this->basePrice;
+    }
+
+    public function setBasePrice(string $basePrice): self
+    {
+        $this->basePrice = $basePrice;
 
         return $this;
     }
