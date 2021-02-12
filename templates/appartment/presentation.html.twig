@@ -44,10 +44,10 @@
                         Apartment
                     {% endtrans %}
                 </h2>
-{#                <ol>#}
-{#                    <li><a href="index.html">Home</a></li>#}
-{#                    <li>Portfolio Details</li>#}
-{#                </ol>#}
+                {# <ol> #}
+                {# <li><a href="index.html">Home</a></li> #}
+                {# <li>Portfolio Details</li> #}
+                {# </ol> #}
             </div>
 
         </div>
@@ -69,8 +69,8 @@
                     <h3>Appartment information</h3>
                     <ul>
                         <li><strong>Number</strong>: {{ appartment.number }}</li>
-{#                        <li><strong>Price*</strong>: {{ appartment.currentAppartmentPricing.price }}</li>#}
-                        <li><strong>Price*</strong>: {{ appartment.basePrice}}</li>
+                        {# <li><strong>Price*</strong>: {{ appartment.currentAppartmentPricing.price }}</li> #}
+                        <li><strong>Price*</strong>: {{ appartment.basePrice }}</li>
 
                     </ul>
                 </div>
@@ -83,6 +83,21 @@
                     {{ appartment.description }}
                 </p>
             </div>
+
+            <br>
+            <div>
+                <h3>{% trans %}
+                        Facilities
+                    {% endtrans %}
+                </h3>
+                <ul>
+                    {% for facility in appartment.facilities %}
+                        <li><strong>{{ facility.name }}</strong>: {{ facility.description }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <br>
+
             <button class="bt"
                     onclick={{ "window.location.href='/Hotel-Management/public/#{app.request.locale}/reservation/new';" }}>
                 {% trans %}
