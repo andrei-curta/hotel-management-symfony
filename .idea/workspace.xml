@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="test functional2">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210212110729.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Appartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Appartment.php" afterDir="false" />
+    <list default="true" id="49db6826-aeb3-44e9-bfb1-70cc88ed5865" name="Default Changelist" comment="adaugat campuri in apartament">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/appartment/presentation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/appartment/presentation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/messages.ro.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.ro.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,13 +183,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\hotel-management\src\Controller" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\hotel-management\public\assets\img\appartments" />
       <recent name="C:\xampp\htdocs\hotel-management\templates\main" />
       <recent name="C:\xampp\htdocs\hotel-management" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hotel-management\src\Controller" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.SecurityControllerTest.testAdminSectionNotDisplayedForUser">
@@ -246,7 +247,7 @@
       <workItem from="1612970533131" duration="11537000" />
       <workItem from="1612987993185" duration="1033000" />
       <workItem from="1613059476739" duration="21723000" />
-      <workItem from="1613123440432" duration="3642000" />
+      <workItem from="1613123440432" duration="4901000" />
     </task>
     <task id="LOCAL-00001" summary="project setup">
       <created>1606667435728</created>
@@ -556,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613127781418</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="adaugat campuri in apartament">
+      <created>1613128239200</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1613128239200</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +584,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adaugat traduceri" />
     <MESSAGE value="actualizat routes pt locale" />
     <MESSAGE value="schimbat sectiunea Team" />
     <MESSAGE value="traduceri" />
@@ -601,7 +608,8 @@
     <MESSAGE value="adaugat posibilitatea de a adauga facilitati la apartament" />
     <MESSAGE value="test functional" />
     <MESSAGE value="test functional2" />
-    <option name="LAST_COMMIT_MESSAGE" value="test functional2" />
+    <MESSAGE value="adaugat campuri in apartament" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaugat campuri in apartament" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-2963" y="-130" key="#CLI_Interpreters" timestamp="1612474791836">
@@ -721,10 +729,10 @@
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
     <state x="-2797" y="-257" key="SimpleOpenTaskDialog/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1612439801810" />
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1613127805752">
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2" timestamp="1613128241386">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>
-    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613127805752" />
+    <state x="-2967" y="-368" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.-789.2560.1400@-3840.-789.2560.1400" timestamp="1613128241386" />
     <state x="-2660" y="-211" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1612466918575">
       <screen x="-3840" y="-789" width="2560" height="1400" />
     </state>

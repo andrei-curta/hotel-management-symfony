@@ -40,11 +40,14 @@
         <div class="container">
 
             <div class="d-flex justify-content-between align-items-center">
-                <h2>Portfolio Details</h2>
-                <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Portfolio Details</li>
-                </ol>
+                <h2>{% trans %}
+                        Apartment
+                    {% endtrans %}
+                </h2>
+{#                <ol>#}
+{#                    <li><a href="index.html">Home</a></li>#}
+{#                    <li>Portfolio Details</li>#}
+{#                </ol>#}
             </div>
 
         </div>
@@ -58,29 +61,32 @@
 
                 <div class="owl-carousel portfolio-details-carousel">
                     <img src={{ asset("assets/img/appartments/#{appartment.image}") }} class="img-fluid" alt="">
-{#                    <img src={{ asset("assets/img/portfolio/portfolio-details-2.jpg") }} class="img-fluid" alt="">#}
-{#                    <img src={{ asset("assets/img/portfolio/portfolio-details-3.jpg") }} class="img-fluid" alt="">#}
+                    {# <img src={{ asset("assets/img/portfolio/portfolio-details-2.jpg") }} class="img-fluid" alt=""> #}
+                    {# <img src={{ asset("assets/img/portfolio/portfolio-details-3.jpg") }} class="img-fluid" alt=""> #}
                 </div>
 
                 <div class="portfolio-info">
                     <h3>Appartment information</h3>
                     <ul>
                         <li><strong>Number</strong>: {{ appartment.number }}</li>
-                        <li><strong>Client</strong>:  {{ appartment.currentAppartmentPricing.price }}</li>
-                        <li><strong>Project date</strong>: 01 March, 2020</li>
-                        <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                        <li><strong>Price*</strong>: {{ appartment.currentAppartmentPricing.price }}</li>
                     </ul>
                 </div>
 
             </div>
 
             <div class="portfolio-description">
-                <h2>Appartment description</h2>
+                <h2>{{ appartment.name }}</h2>
                 <p>
                     {{ appartment.description }}
                 </p>
             </div>
-            <button class="bt"><a href={{ "/Hotel-Management/public/en/reservation/new"}}>Reserve</a></button>
+            <button class="bt"
+                    onclick={{ "window.location.href='/Hotel-Management/public/#{app.request.locale}/reservation/new';" }}>
+                {% trans %}
+                    Reserve
+                {% endtrans %}
+            </button>
         </div>
 
     </section><!-- End Portfolio Details Section -->
