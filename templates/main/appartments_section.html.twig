@@ -15,14 +15,14 @@
                     <div class="portfolio-wrap">
                         <img src={{ asset("assets/img/appartments/#{appartment.image}") }} class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>{{ appartment.number }}</h4>
-                            <p>{{ appartment.description }}</p>
+                            <h4>{{ appartment.name }}</h4>
+                            <p>{{ appartment.location }}</p>
                             <div class="portfolio-links">
                                 <a href={{ asset("assets/img/#{appartment.image}") }} data-gall="portfolioGallery"
                                    class="venobox" title="Web 3">
                                     <i class="bx bx-plus"></i>
                                 </a>
-                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/appartment/presentation/#{appartment.id}"}}
+                                <a href={{ "/Hotel-Management/public/#{app.request.locale}/appartment/presentation/#{appartment.id}" }}
                                    title="More Details">
                                 <i class="bx bx-link">
                                 </i>
