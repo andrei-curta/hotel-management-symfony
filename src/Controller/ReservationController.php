@@ -13,6 +13,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Query\Parameter;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\Query\ResultSetMappingBuilder;
+use phpDocumentor\Reflection\Types\Null_;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
@@ -29,11 +30,24 @@ class ReservationController extends AbstractController
 {
     /**
      * @Route("/", name="reservation_index", methods={"GET"})
+     * @param ReservationRepository $reservationRepository
+     * @param TokenStorageInterface $tokenStorage
+     * @return Response
      */
-    public function index(ReservationRepository $reservationRepository): Response
+    public function index(ReservationRepository $reservationRepository, TokenStorageInterface $tokenStorage): Response
     {
+        $user = $tokenStorage->getToken()->getUser();
+
+        $reservations = [];
+
+        if (in_array('ROLE_ADMIN', $user->getRoles())) {
+            $reservations = $reservationRepository->findAll();
+        } else {
+            $reservations = $reservationRepository->findByUser($user);
+        }
+
         return $this->render('reservation/index.html.twig', [
-            'reservations' => $reservationRepository->findAll(),
+            'reservations' => $reservations,
         ]);
     }
 
@@ -42,7 +56,7 @@ class ReservationController extends AbstractController
         $numberOfDays = $endDate->diff($startDate)->format("%a");
 
         $price = $appartment->getCurrentAppartmentPricing()->getPrice();
-        if($price == null){
+        if ($price == null) {
             $price = $appartment->getBasePrice();
         }
 
