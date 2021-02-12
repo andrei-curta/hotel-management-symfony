@@ -17,6 +17,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
@@ -40,19 +42,13 @@ class ReservationController extends AbstractController
         $numberOfDays = $endDate->diff($startDate)->format("%a");
 
         $price = $appartment->getCurrentAppartmentPricing()->getPrice();
+        if($price == null){
+            $price = $appartment->getBasePrice();
+        }
 
         return $numberOfDays * $price;
     }
 
-    public function calculateTotalServicesPrice(array $services)
-    {
-        $sum = 0;
-
-        foreach ($services as $key => $value) {
-            if (isset($value->price))
-                $sum += $value->price;
-        }
-    }
 
     private function isRoomAvabileInInterval(Appartment $appartment, $startDate, $endDate)
     {
@@ -79,7 +75,7 @@ class ReservationController extends AbstractController
     /**
      * @Route("/new", name="reservation_new", methods={"GET","POST"})
      */
-    public function new(Request $request, TokenStorageInterface $tokenStorage): Response
+    public function new(Request $request, TokenStorageInterface $tokenStorage, MailerInterface $mailer): Response
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
@@ -98,19 +94,34 @@ class ReservationController extends AbstractController
             } else {
 
                 $appartmentPrice = $this->calculateTotalPricePerAppartment($reservation->getStartDate(), $reservation->getEndDate(), $reservation->getAppartments()[0]);
-                $servicesPrice = $this->calculateTotalServicesPrice($reservation->getServices());
-
-                $reservation->setTotalPrice($appartmentPrice + $servicesPrice);
+                $servicesPrice = $reservation->calculateTotalServicesPrice();
+                $totalPrice = $appartmentPrice + $servicesPrice;
+                $reservation->setTotalPrice($totalPrice);
 
                 //set the current user as the person who reserves
                 dump($tokenStorage->getToken()->getUser());
-                $reservation->setIDUser($tokenStorage->getToken()->getUser());
+                $user = $tokenStorage->getToken()->getUser();
+                $reservation->setIDUser($user);
 
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->persist($reservation);
                 $entityManager->flush();
 
-                return $this->redirectToRoute('reservation_index');
+                //send mail
+                $email = (new Email())
+                    ->from("noreply@eaw.com")
+                    ->to($user->getUsername())
+                    //->cc('cc@example.com')
+                    //->bcc('bcc@example.com')
+                    //->replyTo('fabien@example.com')
+                    //->priority(Email::PRIORITY_HIGH)
+                    ->subject("New reservation")
+                    ->text("Pack your bags, you are going on an adventure. And don't forget to pay the cost of $totalPrice");
+
+                $mailer->send($email);
+
+
+                return $this->redirectToRoute('main');
             }
         }
 
