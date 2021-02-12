@@ -21,6 +21,7 @@ class ReservationType extends AbstractType
                 'required' => true,
             ])
             ->add('appartments')
+            ->add('services')
         ;
     }
 

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Appartment;
 use App\Entity\Reservation;
+use App\Entity\Service;
 use App\Form\ReservationType;
 use App\Repository\ReservationRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -43,6 +44,13 @@ class ReservationController extends AbstractController
         return $numberOfDays * $price;
     }
 
+    private function calculateTotalServicesPrice(array $services)
+    {
+
+
+
+    }
+
     private function isRoomAvabileInInterval(Appartment $appartment, $startDate, $endDate)
     {
 
@@ -75,7 +83,6 @@ class ReservationController extends AbstractController
         $reservation = new Reservation();
         $form = $this->createForm(ReservationType::class, $reservation);
         $form->handleRequest($request);
-
 
         if ($form->isSubmitted() && $form->isValid()) {
             //calculate the price and check if reservation is valid

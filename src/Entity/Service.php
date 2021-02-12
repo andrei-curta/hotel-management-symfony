@@ -30,14 +30,10 @@ class Service
     private $description;
 
     /**
-     * @ORM\OneToMany(targetEntity=ServicePricing::class, mappedBy="ID_Service")
+     * @ORM\Column(type="decimal", precision=10, scale=2)
      */
-    private $servicePricings;
+    private $Price;
 
-    public function __construct()
-    {
-        $this->servicePricings = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -68,33 +64,21 @@ class Service
         return $this;
     }
 
-    /**
-     * @return Collection|ServicePricing[]
-     */
-    public function getServicePricings(): Collection
+    public function getPrice(): ?string
     {
-        return $this->servicePricings;
+        return $this->Price;
     }
 
-    public function addServicePricing(ServicePricing $servicePricing): self
+    public function setPrice(string $Price): self
     {
-        if (!$this->servicePricings->contains($servicePricing)) {
-            $this->servicePricings[] = $servicePricing;
-            $servicePricing->setIDService($this);
-        }
+        $this->Price = $Price;
 
         return $this;
     }
 
-    public function removeServicePricing(ServicePricing $servicePricing): self
+    public function __toString()
     {
-        if ($this->servicePricings->removeElement($servicePricing)) {
-            // set the owning side to null (unless already changed)
-            if ($servicePricing->getIDService() === $this) {
-                $servicePricing->setIDService(null);
-            }
-        }
-
-        return $this;
+        return $this->name;
     }
+
 }

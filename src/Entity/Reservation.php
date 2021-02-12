@@ -27,6 +27,7 @@ class Reservation
     public function __construct()
     {
         $this->appartments = new ArrayCollection();
+        $this->services = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -129,6 +130,11 @@ class Reservation
     private $totalPrice;
 
     /**
+     * @ORM\ManyToMany(targetEntity=Service::class)
+     */
+    private $services;
+
+    /**
      * @return mixed
      */
     public function getTotalPrice()
@@ -142,6 +148,30 @@ class Reservation
     public function setTotalPrice($totalPrice): void
     {
         $this->totalPrice = $totalPrice;
+    }
+
+    /**
+     * @return Collection|Service[]
+     */
+    public function getServices(): Collection
+    {
+        return $this->services;
+    }
+
+    public function addService(Service $service): self
+    {
+        if (!$this->services->contains($service)) {
+            $this->services[] = $service;
+        }
+
+        return $this;
+    }
+
+    public function removeService(Service $service): self
+    {
+        $this->services->removeElement($service);
+
+        return $this;
     }
 
 
