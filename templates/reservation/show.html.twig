@@ -19,13 +19,29 @@
                 <th>EndDate</th>
                 <td>{{ reservation.endDate ? reservation.endDate|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
-            <tr>
-                <th>TotalPrice</th>
-                <td>{{ reservation.totalPrice }}</td>
-            </tr>
+
         </tbody>
     </table>
 
+    <h2>Services</h2>
+    <table class="table">
+        <tbody>
+        {% for service in reservation.services %}
+        <tr>
+            <th>{{ service.name }}</th>
+            <td>{{ service.price }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <hr>
+    <br>
+    <br>
+
+    <h3>Total Price:  {{ reservation.totalPrice }}</h3>
+
+    <br>
     <a href="{{ path('reservation_index') }}">back to list</a>
 
     <a href="{{ path('reservation_edit', {'id': reservation.id}) }}">edit</a>
